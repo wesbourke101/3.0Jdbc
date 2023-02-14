@@ -1,15 +1,19 @@
-package com.in28minutes.springboot.LearnJPA40.course.jdbc;
+package com.in28minutes.springboot.LearnJPA40.course;
 
-import com.in28minutes.springboot.LearnJPA40.course.Course;
+import com.in28minutes.springboot.LearnJPA40.course.CourseJpaRepository;
+import com.in28minutes.springboot.LearnJPA40.course.jdbc.CourseJdbcRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CourseJdbcCommandLineRunner implements CommandLineRunner {
+public class CourseCommandLineRunner implements CommandLineRunner {
+
+//    @Autowired
+//    private CourseJdbcRepository repository;
 
     @Autowired
-    private CourseJdbcRepository repository;
+    private CourseJpaRepository repository;
 
     @Override
     public void run(String... args) throws Exception {
